@@ -1,103 +1,84 @@
-## U.S. Stock Market Pattern Analysis
+# Stock Visualization
 
-A data-driven exploration of market behavior, technical indicators, and regime dynamics using historical S&P 500 stock data.
+Data-driven analysis of U.S. equity market behavior using historical S&P 500 data.
+This project focuses on interpretable signal analysis and strategy evaluation instead of black-box price prediction.
 
-Project Objective
+## What This Project Does
 
-Financial markets exhibit recurring statistical structures such as volatility clustering, regime shifts, and cross-sector correlation changes.
+- Cleans and standardizes large-scale OHLCV data
+- Computes technical indicators (MA, MACD, KDJ, volatility, regime labels)
+- Builds a reusable backtesting pipeline
+- Evaluates strategy behavior by:
+  - overall market
+  - bull/bear regime
+  - sector
+  - liquidity leaders
+- Exports portfolio metrics and visualization-ready outputs
 
-This project investigates:
+## Dataset
 
-Moving average crossover behavior
+- Source: Kaggle S&P 500 historical stock data
+- Coverage: ~5 years daily OHLCV
+- Scale: ~619k rows (raw)
 
-Volatility regimes and return distributions
+## Repository Structure
 
-Cross-sectional stock correlations
+```text
+data/
+  raw/
+  processed/
+outputs/
+src/
+README.md
+```
 
-Indicator performance under different market conditions
+Key scripts:
+- `src/clean_merge01.py` - build master table with features and labels
+- `src/strategies.py` - strategy signal logic and templates
+- `src/backtest.py` - backtest engine and performance metrics
+- `src/evaluate.py` - run multi-strategy evaluation and export reports
+- `src/plot_violin_regime.py` - regime return distribution chart
+- `src/plot_effectiveness_bars_lowN.py` - signal effectiveness bars with uncertainty markers
 
-Rather than focusing on price prediction, this project emphasizes empirical analysis and interpretable visualization of financial time-series patterns.
+## Quick Start
 
-Dataset
-
-Source: Kaggle – S&P 500 Historical Stock Data
-
-Coverage: ~5 years of daily OHLCV data
-
-Size: ~619,000 rows
-
-Key Components
-Data Processing
-
-Cleaning and validation of time-series data
-
-Computation of returns and rolling volatility
-
-Technical indicator generation (e.g., moving averages)
-
-Visualization
-
-Time-series overlays (price + indicators)
-
-Correlation heatmaps
-
-Regime-based distribution comparisons
-
-Interactive dashboard (Power BI integration)
-
-Project Structure
-data/        → raw dataset  
-notebooks/   → exploratory analysis  
-src/         → reusable indicator & preprocessing modules  
-Tools & Technologies
-
-Python (Pandas, NumPy, Matplotlib / Plotly / Altair)
-
-Power BI (interactive dashboard exploration)
-
-Developed as part of a financial data visualization study.
-
-## Multi-Strategy Backtest Workflow
-
-This repo now supports a reusable evaluation pipeline with three layers:
-
-1. `src/clean_merge01.py`  
-Builds `master` table (merge + indicators + regime + forward returns).
-
-2. `src/strategies.py`  
-Defines strategy rules (MA / MACD / KDJ baseline + `custom_template`).
-
-3. `src/backtest.py` + `src/evaluate.py`  
-Runs portfolio backtest and exports overall/regime/sector/leader metrics.
-
-### Run Steps
+Run from repo root:
 
 ```bash
 .venv/bin/python src/clean_merge01.py
 .venv/bin/python src/evaluate.py
 ```
 
-Outputs are saved to `data/processed/`:
+Optional visualization scripts:
 
+```bash
+.venv/bin/python src/plot_violin_regime.py
+.venv/bin/python src/plot_effectiveness_bars_lowN.py
+```
+
+## Main Outputs
+
+Generated under `data/processed/`:
 - `master.parquet` / `master.csv`
 - `market_proxy_daily.csv`
 - `strategy_summary.csv`
 - `strategy_daily_returns.csv`
 - `strategy_trades.csv`
 
-### Implement Your Own Strategy
+Generated under `outputs/`:
+- `fig_violin_regime_fwd20.png`
+- `fig_effectiveness_bars_5d_20d.png`
+- `fig_signal_regime_compare.png`
 
-Edit `strategy_custom_template()` in `src/strategies.py` and replace entry/exit logic with your B1/B2 rules.
+## Customize a Strategy
 
-Then run:
+Edit `strategy_custom_template()` in `src/strategies.py`, then run:
 
 ```bash
 .venv/bin/python src/evaluate.py --strategies custom_template
 ```
 
-## Generate Simplified B1/B2 Signals (v2)
-
-How to generate signals:
+## Signal Export (v2)
 
 ```bash
 python src/strategy_signals_v2.py
