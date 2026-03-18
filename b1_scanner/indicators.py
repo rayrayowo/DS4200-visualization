@@ -96,22 +96,20 @@ def calc_zhixing_trend(df: pd.DataFrame) -> pd.DataFrame:
 
 def calc_brick_chart(df: pd.DataFrame) -> pd.DataFrame:
     """
-    砖型图 (Brick Chart) - 富途副图版
-    
-    用法:
-    - 白色砖头 = 买点 (昨绿今红，且今天红砖高度 > 昨天绿砖高度的 2/3)
-    - 红砖 = 持有
-    - 绿砖 = 空仓
+    砖型图 (Brick Chart) - 通达信版
     
     公式:
-    DEN := HHV(H,4) - LLV(L,4);
-    VAR1A := IF(DEN=0, 0, (HHV(H,4)-C)/DEN*100 - 90);
-    VAR2A := SMA(VAR1A,4,1) + 100;
-    VAR3A := IF(DEN=0, 0, (C-LLV(L,4))/DEN*100);
-    VAR4A := SMA(VAR3A,6,1);
-    VAR5A := SMA(VAR4A,6,1) + 100;
-    VAR6A := VAR5A - VAR2A;
-    砖型图 := IF(VAR6A>4, VAR6A-4, 0);
+    VAR1A:=(HHV(HIGH,4)-CLOSE)/(HHV(HIGH,4)-LLV(LOW,4))*100-90;
+    VAR2A:=SMA(VAR1A,4,1)+100;
+    VAR3A:=(CLOSE-LLV(LOW,4))/(HHV(HIGH,4)-LLV(LOW,4))*100;
+    VAR4A:=SMA(VAR3A,6,1);
+    VAR5A:=SMA(VAR4A,6,1)+100;
+    VAR6A:=VAR5A-VAR2A;
+    砖型图:=IF(VAR6A>4,VAR6A-4,0),COLORRED;
+    
+    白色砖头信号 (白砖头):
+    AA:=(REF(砖型图,1)<砖型图);  今天红砖
+    CC:=REF(AA,1)=0 &&(AA=1);  前一天不是红砖 且 今天红砖 = 买点信号
     """
     
     # 计算基础数据
@@ -119,58 +117,48 @@ def calc_brick_chart(df: pd.DataFrame) -> pd.DataFrame:
     low = df["low"]
     close = df["close"]
     
-    # DEN := HHV(H,4) - LLV(L,4)
-    den = high.rolling(window=4, min_periods=4).max() - low.rolling(window=4, min_periods=4).min()
+    # HHV(HIGH,4) 和 LLV(LOW,4)
+    hhv_high_4 = high.rolling(window=4, min_periods=4).max()
+    llv_low_4 = low.rolling(window=4, min_periods=4).min()
     
-    # VAR1A := IF(DEN=0, 0, (HHV(H,4)-C)/DEN*100 - 90)
-    hh = high.rolling(window=4, min_periods=4).max()
-    var1a = pd.Series(np.where(den == 0, 0, (hh - close) / den * 100 - 90), index=df.index)
+    # VAR1A:=(HHV(HIGH,4)-CLOSE)/(HHV(HIGH,4)-LLV(LOW,4))*100-90
+    var1a = (hhv_high_4 - close) / (hhv_high_4 - llv_low_4) * 100 - 90
     
-    # VAR2A := SMA(VAR1A,4,1) + 100
-    var2a = var1a.rolling(window=4, min_periods=4).apply(lambda x: np.sum(x * np.arange(1, len(x)+1)) / np.sum(np.arange(1, len(x)+1)), raw=True) + 100
+    # VAR2A:=SMA(VAR1A,4,1)+100
+    # SMA(x, 4, 1) = EMA(x, 4) in this context (simple moving average with weight)
+    var2a = var1a.ewm(span=4, adjust=False).mean() + 100
     
-    # VAR3A := IF(DEN=0, 0, (C-LLV(L,4))/DEN*100)
-    ll = low.rolling(window=4, min_periods=4).min()
-    var3a = pd.Series(np.where(den == 0, 0, (close - ll) / den * 100), index=df.index)
+    # VAR3A:=(CLOSE-LLV(LOW,4))/(HHV(HIGH,4)-LLV(LOW,4))*100
+    var3a = (close - llv_low_4) / (hhv_high_4 - llv_low_4) * 100
     
-    # VAR4A := SMA(VAR3A,6,1)
-    var4a = var3a.rolling(window=6, min_periods=6).apply(lambda x: np.sum(x * np.arange(1, len(x)+1)) / np.sum(np.arange(1, len(x)+1)), raw=True)
+    # VAR4A:=SMA(VAR3A,6,1)
+    var4a = var3a.ewm(span=6, adjust=False).mean()
     
-    # VAR5A := SMA(VAR4A,6,1) + 100
-    var5a = var4a.rolling(window=6, min_periods=6).apply(lambda x: np.sum(x * np.arange(1, len(x)+1)) / np.sum(np.arange(1, len(x)+1)), raw=True) + 100
+    # VAR5A:=SMA(VAR4A,6,1)+100
+    var5a = var4a.ewm(span=6, adjust=False).mean() + 100
     
-    # VAR6A := VAR5A - VAR2A
+    # VAR6A:=VAR5A-VAR2A
     var6a = var5a - var2a
     
-    # 砖型图 := IF(VAR6A>4, VAR6A-4, 0)
+    # 砖型图:=IF(VAR6A>4,VAR6A-4,0)
     brick = pd.Series(np.where(var6a > 4, var6a - 4, 0), index=df.index)
     
-    # 计算信号
-    # PRE := REF(砖型图,1)
-    # PRE2 := REF(砖型图,2)
+    # 计算白色砖头信号 (通达信公式)
+    # AA:=(REF(砖型图,1)<砖型图) - 今天红砖 (砖型图上涨)
+    # CC:=REF(AA,1)=0 &&(AA=1) - 前一天AA=0 且 今天AA=1 = 买点!
     prev_brick = brick.shift(1)
-    prev2_brick = brick.shift(2)
     
-    # TODAY_RED := (PRE < 砖型图)  今天红砖
-    today_red = prev_brick < brick
+    # AA = 今天红砖 (砖型图 > 昨天)
+    AA = brick > prev_brick
     
-    # YEST_GREEN := (PRE2 > PRE)  昨天绿
-    yest_green = prev2_brick > prev_brick
-    
-    # RED_LEN := 砖型图 - PRE
-    red_len = brick - prev_brick
-    
-    # GREEN_LEN := PRE2 - PRE
-    green_len = prev2_brick - prev_brick
-    
-    # WHITE_SIG := TODAY_RED AND YEST_GREEN AND (RED_LEN > GREEN_LEN * 2 / 3)
-    # 白色砖头信号 = 买点!
-    white_sig = today_red & yest_green & (red_len > green_len * 2 / 3)
+    # CC = 前一天不是红砖(REF(AA,1)=0) AND 今天红砖(AA=1)
+    prev_AA = AA.shift(1)
+    CC = (prev_AA == False) & (AA == True)
     
     return pd.DataFrame({
         "brick_chart": brick,
-        "brick_white": white_sig.astype(int),  # 白色砖头 = 1 (买点)
-        "brick_red": today_red.astype(int),     # 红砖
+        "brick_white": CC.astype(int),  # 白色砖头信号 = 1 (买点)
+        "brick_red": AA.astype(int),    # 红砖 = 1 (持有)
     })
 
 
