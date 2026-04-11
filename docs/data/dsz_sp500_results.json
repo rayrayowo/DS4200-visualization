@@ -1,0 +1,1665 @@
+{
+  "strategy": "DSZ N-type (S&P 500 v2)",
+  "universe": "505 stocks, 2013-2018",
+  "params": {
+    "stop_loss": "2%",
+    "rise_min": "4%",
+    "ema8_filter": false
+  },
+  "equity": [
+    {
+      "date": "2013-07-25",
+      "value": 1000000
+    },
+    {
+      "date": "2013-08-01",
+      "value": 980000.0
+    },
+    {
+      "date": "2013-08-08",
+      "value": 980000.0
+    },
+    {
+      "date": "2013-08-20",
+      "value": 960400.0
+    },
+    {
+      "date": "2013-09-16",
+      "value": 941192.0
+    },
+    {
+      "date": "2013-09-24",
+      "value": 922368.16
+    },
+    {
+      "date": "2013-10-01",
+      "value": 922368.16
+    },
+    {
+      "date": "2013-10-10",
+      "value": 922368.16
+    },
+    {
+      "date": "2013-10-24",
+      "value": 922368.16
+    },
+    {
+      "date": "2013-10-25",
+      "value": 922368.16
+    },
+    {
+      "date": "2013-10-28",
+      "value": 922368.16
+    },
+    {
+      "date": "2013-10-31",
+      "value": 922368.16
+    },
+    {
+      "date": "2013-11-05",
+      "value": 922368.16
+    },
+    {
+      "date": "2013-11-08",
+      "value": 903920.8
+    },
+    {
+      "date": "2013-11-13",
+      "value": 903920.8
+    },
+    {
+      "date": "2013-11-19",
+      "value": 903920.8
+    },
+    {
+      "date": "2013-11-26",
+      "value": 903920.8
+    },
+    {
+      "date": "2013-12-02",
+      "value": 903920.8
+    },
+    {
+      "date": "2013-12-04",
+      "value": 903920.8
+    },
+    {
+      "date": "2013-12-23",
+      "value": 903920.8
+    },
+    {
+      "date": "2014-01-14",
+      "value": 903920.8
+    },
+    {
+      "date": "2014-01-21",
+      "value": 903920.8
+    },
+    {
+      "date": "2014-01-27",
+      "value": 885842.38
+    },
+    {
+      "date": "2014-01-28",
+      "value": 885842.38
+    },
+    {
+      "date": "2014-02-06",
+      "value": 885842.38
+    },
+    {
+      "date": "2014-02-20",
+      "value": 885842.38
+    },
+    {
+      "date": "2014-03-04",
+      "value": 885842.38
+    },
+    {
+      "date": "2014-03-10",
+      "value": 868125.53
+    },
+    {
+      "date": "2014-03-28",
+      "value": 868125.53
+    },
+    {
+      "date": "2014-04-01",
+      "value": 850763.02
+    },
+    {
+      "date": "2014-04-21",
+      "value": 833747.76
+    },
+    {
+      "date": "2014-06-25",
+      "value": 833747.76
+    },
+    {
+      "date": "2014-07-11",
+      "value": 817072.81
+    },
+    {
+      "date": "2014-07-16",
+      "value": 817072.81
+    },
+    {
+      "date": "2014-07-22",
+      "value": 817072.81
+    },
+    {
+      "date": "2014-07-25",
+      "value": 817072.81
+    },
+    {
+      "date": "2014-08-04",
+      "value": 817072.81
+    },
+    {
+      "date": "2014-09-02",
+      "value": 800731.35
+    },
+    {
+      "date": "2014-09-15",
+      "value": 784716.72
+    },
+    {
+      "date": "2014-09-18",
+      "value": 769022.39
+    },
+    {
+      "date": "2014-10-30",
+      "value": 753641.94
+    },
+    {
+      "date": "2014-11-06",
+      "value": 753641.94
+    },
+    {
+      "date": "2014-12-02",
+      "value": 738569.1
+    },
+    {
+      "date": "2014-12-17",
+      "value": 738569.1
+    },
+    {
+      "date": "2015-01-07",
+      "value": 738569.1
+    },
+    {
+      "date": "2015-01-08",
+      "value": 738569.1
+    },
+    {
+      "date": "2015-01-21",
+      "value": 738569.1
+    },
+    {
+      "date": "2015-03-06",
+      "value": 738569.1
+    },
+    {
+      "date": "2015-03-18",
+      "value": 723797.72
+    },
+    {
+      "date": "2015-04-09",
+      "value": 723797.72
+    },
+    {
+      "date": "2015-04-14",
+      "value": 723797.72
+    },
+    {
+      "date": "2015-05-20",
+      "value": 723797.72
+    },
+    {
+      "date": "2015-06-16",
+      "value": 709321.77
+    },
+    {
+      "date": "2015-08-26",
+      "value": 695135.33
+    },
+    {
+      "date": "2015-10-23",
+      "value": 681232.62
+    },
+    {
+      "date": "2015-10-28",
+      "value": 681232.62
+    },
+    {
+      "date": "2015-11-16",
+      "value": 667607.97
+    },
+    {
+      "date": "2015-11-18",
+      "value": 667607.97
+    },
+    {
+      "date": "2015-11-24",
+      "value": 654255.81
+    },
+    {
+      "date": "2015-12-04",
+      "value": 641170.7
+    },
+    {
+      "date": "2015-12-08",
+      "value": 641170.7
+    },
+    {
+      "date": "2015-12-11",
+      "value": 628347.28
+    },
+    {
+      "date": "2016-01-26",
+      "value": 615780.34
+    },
+    {
+      "date": "2016-02-03",
+      "value": 603464.73
+    },
+    {
+      "date": "2016-02-17",
+      "value": 591395.44
+    },
+    {
+      "date": "2016-02-26",
+      "value": 579567.53
+    },
+    {
+      "date": "2016-03-01",
+      "value": 579567.53
+    },
+    {
+      "date": "2016-03-11",
+      "value": 567976.18
+    },
+    {
+      "date": "2016-03-16",
+      "value": 556616.65
+    },
+    {
+      "date": "2016-04-06",
+      "value": 545484.32
+    },
+    {
+      "date": "2016-04-07",
+      "value": 545484.32
+    },
+    {
+      "date": "2016-04-12",
+      "value": 534574.63
+    },
+    {
+      "date": "2016-04-13",
+      "value": 523883.14
+    },
+    {
+      "date": "2016-04-22",
+      "value": 513405.48
+    },
+    {
+      "date": "2016-04-26",
+      "value": 503137.37
+    },
+    {
+      "date": "2016-04-27",
+      "value": 493074.62
+    },
+    {
+      "date": "2016-05-02",
+      "value": 483213.13
+    },
+    {
+      "date": "2016-05-05",
+      "value": 473548.87
+    },
+    {
+      "date": "2016-05-10",
+      "value": 464077.89
+    },
+    {
+      "date": "2016-05-16",
+      "value": 464077.89
+    },
+    {
+      "date": "2016-05-18",
+      "value": 454796.33
+    },
+    {
+      "date": "2016-06-06",
+      "value": 445700.4
+    },
+    {
+      "date": "2016-06-07",
+      "value": 436786.4
+    },
+    {
+      "date": "2016-06-23",
+      "value": 428050.67
+    },
+    {
+      "date": "2016-07-07",
+      "value": 419489.65
+    },
+    {
+      "date": "2016-07-20",
+      "value": 411099.86
+    },
+    {
+      "date": "2016-07-26",
+      "value": 402877.86
+    },
+    {
+      "date": "2016-07-29",
+      "value": 394820.31
+    },
+    {
+      "date": "2016-08-03",
+      "value": 386923.9
+    },
+    {
+      "date": "2016-08-11",
+      "value": 379185.42
+    },
+    {
+      "date": "2016-08-25",
+      "value": 371601.71
+    },
+    {
+      "date": "2016-09-15",
+      "value": 371601.71
+    },
+    {
+      "date": "2016-09-28",
+      "value": 364169.68
+    },
+    {
+      "date": "2016-11-07",
+      "value": 356886.29
+    },
+    {
+      "date": "2016-11-18",
+      "value": 349748.56
+    },
+    {
+      "date": "2016-11-30",
+      "value": 342753.59
+    },
+    {
+      "date": "2016-12-07",
+      "value": 335898.52
+    },
+    {
+      "date": "2016-12-19",
+      "value": 329180.55
+    },
+    {
+      "date": "2017-01-04",
+      "value": 329180.55
+    },
+    {
+      "date": "2017-02-01",
+      "value": 322596.94
+    },
+    {
+      "date": "2017-07-13",
+      "value": 316145.0
+    },
+    {
+      "date": "2017-08-01",
+      "value": 309822.1
+    },
+    {
+      "date": "2017-08-08",
+      "value": 303625.66
+    },
+    {
+      "date": "2017-09-07",
+      "value": 297553.14
+    },
+    {
+      "date": "2017-10-25",
+      "value": 291602.08
+    },
+    {
+      "date": "2017-11-06",
+      "value": 285770.04
+    },
+    {
+      "date": "2017-11-27",
+      "value": 280054.64
+    },
+    {
+      "date": "2017-11-28",
+      "value": 274453.54
+    },
+    {
+      "date": "2017-12-04",
+      "value": 268964.47
+    },
+    {
+      "date": "2017-12-08",
+      "value": 263585.18
+    },
+    {
+      "date": "2017-12-13",
+      "value": 258313.48
+    },
+    {
+      "date": "2017-12-26",
+      "value": 253147.21
+    },
+    {
+      "date": "2018-01-02",
+      "value": 248084.27
+    },
+    {
+      "date": "2018-01-11",
+      "value": 243122.58
+    },
+    {
+      "date": "2018-01-18",
+      "value": 238260.13
+    },
+    {
+      "date": "2018-01-19",
+      "value": 233494.93
+    },
+    {
+      "date": "2018-02-07",
+      "value": 460848.94
+    }
+  ],
+  "trades": [
+    {
+      "ticker": "AAP",
+      "entry_date": "2014-02-06",
+      "exit_date": "2018-01-02",
+      "entry_price": 121.5,
+      "exit_price": 119.07,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 983,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "ADI",
+      "entry_date": "2015-05-20",
+      "exit_date": "2015-11-24",
+      "entry_price": 64.2,
+      "exit_price": 62.92,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 131,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "AIZ",
+      "entry_date": "2015-12-04",
+      "exit_date": "2016-04-27",
+      "entry_price": 83.55,
+      "exit_price": 81.88,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 98,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "AMAT",
+      "entry_date": "2013-09-24",
+      "exit_date": "2013-09-24",
+      "entry_price": 17.33,
+      "exit_price": 16.98,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2014-01-14",
+      "exit_date": "2014-04-21",
+      "entry_price": 4.14,
+      "exit_price": 4.06,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 66,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "AMZN",
+      "entry_date": "2013-10-25",
+      "exit_date": "2014-07-11",
+      "entry_price": 358.6,
+      "exit_price": 351.43,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 177,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "APA",
+      "entry_date": "2014-07-22",
+      "exit_date": "2015-11-24",
+      "entry_price": 103.72,
+      "exit_price": 101.65,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 340,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "APC",
+      "entry_date": "2014-08-04",
+      "exit_date": "2016-04-22",
+      "entry_price": 106.6,
+      "exit_price": 104.47,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 433,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "AVY",
+      "entry_date": "2017-02-01",
+      "exit_date": "2017-02-01",
+      "entry_price": 78.97,
+      "exit_price": 77.39,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "AVY",
+      "entry_date": "2017-10-25",
+      "exit_date": "2017-10-25",
+      "entry_price": 103.79,
+      "exit_price": 101.71,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "AZO",
+      "entry_date": "2015-12-08",
+      "exit_date": "2017-11-28",
+      "entry_price": 768.37,
+      "exit_price": 753.0,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 497,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "BBY",
+      "entry_date": "2013-08-20",
+      "exit_date": "2013-08-20",
+      "entry_price": 34.18,
+      "exit_price": 33.5,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "BBY",
+      "entry_date": "2013-10-10",
+      "exit_date": "2014-10-30",
+      "entry_price": 37.75,
+      "exit_price": 36.99,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 266,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "CAG",
+      "entry_date": "2014-09-18",
+      "exit_date": "2014-09-18",
+      "entry_price": 33.2,
+      "exit_price": 32.54,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "CAT",
+      "entry_date": "2014-01-27",
+      "exit_date": "2014-01-27",
+      "entry_price": 91.77,
+      "exit_price": 89.93,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "CDNS",
+      "entry_date": "2015-08-26",
+      "exit_date": "2015-08-26",
+      "entry_price": 19.17,
+      "exit_price": 18.79,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "CF",
+      "entry_date": "2013-10-28",
+      "exit_date": "2013-11-08",
+      "entry_price": 43.4,
+      "exit_price": 42.53,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 9,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "CF",
+      "entry_date": "2013-12-04",
+      "exit_date": "2016-11-18",
+      "entry_price": 45.42,
+      "exit_price": 44.51,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 746,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "CHK",
+      "entry_date": "2016-04-22",
+      "exit_date": "2016-08-03",
+      "entry_price": 6.29,
+      "exit_price": 6.16,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 71,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "CHRW",
+      "entry_date": "2015-01-08",
+      "exit_date": "2015-08-26",
+      "entry_price": 70.67,
+      "exit_price": 69.26,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 159,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "COG",
+      "entry_date": "2014-01-21",
+      "exit_date": "2016-02-17",
+      "entry_price": 37.95,
+      "exit_price": 37.19,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 522,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "COG",
+      "entry_date": "2016-02-26",
+      "exit_date": "2016-02-26",
+      "entry_price": 20.13,
+      "exit_price": 19.73,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "COP",
+      "entry_date": "2015-11-16",
+      "exit_date": "2016-11-30",
+      "entry_price": 51.9,
+      "exit_price": 50.86,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 262,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "COTY",
+      "entry_date": "2015-06-16",
+      "exit_date": "2015-06-16",
+      "entry_price": 30.06,
+      "exit_price": 29.46,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "CXO",
+      "entry_date": "2013-10-01",
+      "exit_date": "2013-11-08",
+      "entry_price": 109.25,
+      "exit_price": 107.06,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 28,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "DRI",
+      "entry_date": "2013-12-23",
+      "exit_date": "2014-09-15",
+      "entry_price": 52.0,
+      "exit_price": 50.96,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 182,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "DVN",
+      "entry_date": "2013-11-19",
+      "exit_date": "2016-04-27",
+      "entry_price": 59.78,
+      "exit_price": 58.58,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 612,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "DVN",
+      "entry_date": "2016-06-06",
+      "exit_date": "2016-07-29",
+      "entry_price": 37.26,
+      "exit_price": 36.51,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 38,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "EQT",
+      "entry_date": "2013-07-25",
+      "exit_date": "2016-04-12",
+      "entry_price": 82.0,
+      "exit_price": 80.36,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 683,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "FFIV",
+      "entry_date": "2015-08-26",
+      "exit_date": "2016-06-07",
+      "entry_price": 120.61,
+      "exit_price": 118.2,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 196,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "FL",
+      "entry_date": "2015-03-06",
+      "exit_date": "2017-12-08",
+      "entry_price": 58.57,
+      "exit_price": 57.4,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 697,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "FMC",
+      "entry_date": "2014-03-10",
+      "exit_date": "2014-03-10",
+      "entry_price": 83.94,
+      "exit_price": 82.26,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "FTI",
+      "entry_date": "2016-05-16",
+      "exit_date": "2016-09-28",
+      "entry_price": 28.14,
+      "exit_price": 27.58,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 94,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "GLW",
+      "entry_date": "2015-12-11",
+      "exit_date": "2015-12-11",
+      "entry_price": 18.75,
+      "exit_price": 18.38,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "GPS",
+      "entry_date": "2015-01-07",
+      "exit_date": "2016-11-07",
+      "entry_price": 42.28,
+      "exit_price": 41.43,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 463,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "GT",
+      "entry_date": "2016-09-15",
+      "exit_date": "2016-12-07",
+      "entry_price": 32.29,
+      "exit_price": 31.64,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 58,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "HAL",
+      "entry_date": "2015-04-09",
+      "exit_date": "2016-04-06",
+      "entry_price": 44.49,
+      "exit_price": 43.6,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 250,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "HBI",
+      "entry_date": "2014-06-25",
+      "exit_date": "2018-01-19",
+      "entry_price": 23.71,
+      "exit_price": 23.24,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 899,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "HES",
+      "entry_date": "2015-11-24",
+      "exit_date": "2016-04-06",
+      "entry_price": 59.23,
+      "exit_price": 58.05,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 90,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "HES",
+      "entry_date": "2016-04-22",
+      "exit_date": "2016-05-10",
+      "entry_price": 60.5,
+      "exit_price": 59.29,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 12,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "HOG",
+      "entry_date": "2016-04-13",
+      "exit_date": "2016-04-13",
+      "entry_price": 47.01,
+      "exit_price": 46.07,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "HP",
+      "entry_date": "2015-04-14",
+      "exit_date": "2016-11-30",
+      "entry_price": 72.5,
+      "exit_price": 71.05,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 413,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "KMI",
+      "entry_date": "2014-12-17",
+      "exit_date": "2016-03-16",
+      "entry_price": 38.43,
+      "exit_price": 37.66,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 312,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "KORS",
+      "entry_date": "2013-11-05",
+      "exit_date": "2017-11-06",
+      "entry_price": 77.5,
+      "exit_price": 75.95,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 1008,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "KR",
+      "entry_date": "2014-10-30",
+      "exit_date": "2017-12-04",
+      "entry_price": 29.04,
+      "exit_price": 28.46,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 779,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "LB",
+      "entry_date": "2013-08-08",
+      "exit_date": "2017-11-27",
+      "entry_price": 60.17,
+      "exit_price": 58.97,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 1084,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "LNC",
+      "entry_date": "2013-08-01",
+      "exit_date": "2013-08-01",
+      "entry_price": 44.56,
+      "exit_price": 43.67,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "LYB",
+      "entry_date": "2014-07-25",
+      "exit_date": "2015-03-18",
+      "entry_price": 105.0,
+      "exit_price": 102.9,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 162,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "MAT",
+      "entry_date": "2015-12-04",
+      "exit_date": "2017-12-13",
+      "entry_price": 24.97,
+      "exit_price": 24.47,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 510,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "MET",
+      "entry_date": "2013-08-01",
+      "exit_date": "2013-11-08",
+      "entry_price": 49.07,
+      "exit_price": 48.09,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 70,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "MGM",
+      "entry_date": "2014-02-20",
+      "exit_date": "2015-10-23",
+      "entry_price": 26.14,
+      "exit_price": 25.62,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 423,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "MOS",
+      "entry_date": "2014-01-14",
+      "exit_date": "2016-11-30",
+      "entry_price": 46.26,
+      "exit_price": 45.33,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 726,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "MOS",
+      "entry_date": "2017-01-04",
+      "exit_date": "2018-01-11",
+      "entry_price": 29.7,
+      "exit_price": 29.11,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 257,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "MPC",
+      "entry_date": "2013-12-02",
+      "exit_date": "2016-07-26",
+      "entry_price": 41.92,
+      "exit_price": 41.08,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 666,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "M",
+      "entry_date": "2013-11-13",
+      "exit_date": "2017-12-26",
+      "entry_price": 49.65,
+      "exit_price": 48.66,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 1036,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "NBL",
+      "entry_date": "2013-11-08",
+      "exit_date": "2015-11-16",
+      "entry_price": 72.7,
+      "exit_price": 71.25,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 508,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "NCLH",
+      "entry_date": "2014-09-02",
+      "exit_date": "2014-09-02",
+      "entry_price": 38.01,
+      "exit_price": 37.25,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "NEM",
+      "entry_date": "2014-03-28",
+      "exit_date": "2016-02-03",
+      "entry_price": 23.01,
+      "exit_price": 22.55,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 466,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "NOV",
+      "entry_date": "2013-10-25",
+      "exit_date": "2016-06-06",
+      "entry_price": 82.03,
+      "exit_price": 80.39,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 656,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "NRG",
+      "entry_date": "2013-10-25",
+      "exit_date": "2016-03-11",
+      "entry_price": 28.28,
+      "exit_price": 27.71,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 597,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "NRG",
+      "entry_date": "2016-03-16",
+      "exit_date": "2016-12-19",
+      "entry_price": 13.35,
+      "exit_price": 13.08,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 193,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "NSC",
+      "entry_date": "2015-11-18",
+      "exit_date": "2016-04-22",
+      "entry_price": 90.69,
+      "exit_price": 88.88,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 106,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "ORLY",
+      "entry_date": "2016-03-01",
+      "exit_date": "2017-11-28",
+      "entry_price": 263.18,
+      "exit_price": 257.92,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 441,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "OXY",
+      "entry_date": "2015-10-28",
+      "exit_date": "2016-04-06",
+      "entry_price": 70.77,
+      "exit_price": 69.35,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 109,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "PCAR",
+      "entry_date": "2016-04-26",
+      "exit_date": "2016-04-26",
+      "entry_price": 57.98,
+      "exit_price": 56.82,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "PKG",
+      "entry_date": "2013-09-16",
+      "exit_date": "2013-09-16",
+      "entry_price": 60.06,
+      "exit_price": 58.86,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "PRGO",
+      "entry_date": "2013-10-31",
+      "exit_date": "2017-09-07",
+      "entry_price": 133.5,
+      "exit_price": 130.83,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 969,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "PRU",
+      "entry_date": "2013-08-01",
+      "exit_date": "2016-05-18",
+      "entry_price": 79.67,
+      "exit_price": 78.08,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 704,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "PVH",
+      "entry_date": "2016-08-11",
+      "exit_date": "2016-08-11",
+      "entry_price": 101.94,
+      "exit_price": 99.9,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "PXD",
+      "entry_date": "2013-11-13",
+      "exit_date": "2016-04-26",
+      "entry_price": 186.15,
+      "exit_price": 182.43,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 615,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "PXD",
+      "entry_date": "2016-09-28",
+      "exit_date": "2017-11-06",
+      "entry_price": 174.54,
+      "exit_price": 171.05,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 279,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "RL",
+      "entry_date": "2017-08-08",
+      "exit_date": "2017-08-08",
+      "entry_price": 86.31,
+      "exit_price": 84.58,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "RRC",
+      "entry_date": "2015-04-14",
+      "exit_date": "2016-04-22",
+      "entry_price": 55.63,
+      "exit_price": 54.52,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 259,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "SNI",
+      "entry_date": "2014-07-16",
+      "exit_date": "2015-12-04",
+      "entry_price": 81.86,
+      "exit_price": 80.22,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 351,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "TIF",
+      "entry_date": "2013-11-26",
+      "exit_date": "2016-08-25",
+      "entry_price": 86.09,
+      "exit_price": 84.37,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 691,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "TPR",
+      "entry_date": "2015-01-21",
+      "exit_date": "2016-01-26",
+      "entry_price": 36.23,
+      "exit_price": 35.51,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 255,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "TRIP",
+      "entry_date": "2014-03-04",
+      "exit_date": "2014-04-01",
+      "entry_price": 102.99,
+      "exit_price": 100.93,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 20,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "TROW",
+      "entry_date": "2014-01-28",
+      "exit_date": "2017-07-13",
+      "entry_price": 80.16,
+      "exit_price": 78.56,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 871,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "TSCO",
+      "entry_date": "2013-10-24",
+      "exit_date": "2017-11-28",
+      "entry_price": 70.0,
+      "exit_price": 68.6,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 1031,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "VIAB",
+      "entry_date": "2015-11-18",
+      "exit_date": "2018-01-18",
+      "entry_price": 50.93,
+      "exit_price": 49.91,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 544,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "VLO",
+      "entry_date": "2014-04-01",
+      "exit_date": "2014-12-02",
+      "entry_price": 53.59,
+      "exit_price": 52.52,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 170,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "VRTX",
+      "entry_date": "2014-11-06",
+      "exit_date": "2016-07-20",
+      "entry_price": 112.43,
+      "exit_price": 110.18,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 427,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "WDC",
+      "entry_date": "2013-08-08",
+      "exit_date": "2016-06-23",
+      "entry_price": 64.2,
+      "exit_price": 62.92,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 724,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "WDC",
+      "entry_date": "2016-07-07",
+      "exit_date": "2016-07-07",
+      "entry_price": 48.28,
+      "exit_price": 47.31,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 0,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "WHR",
+      "entry_date": "2014-12-17",
+      "exit_date": "2016-03-11",
+      "entry_price": 174.43,
+      "exit_price": 170.94,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 309,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "WYNN",
+      "entry_date": "2016-04-07",
+      "exit_date": "2016-05-02",
+      "entry_price": 95.04,
+      "exit_price": 93.14,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 17,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "WYNN",
+      "entry_date": "2016-05-10",
+      "exit_date": "2018-02-07",
+      "entry_price": 89.84,
+      "exit_price": 177.32,
+      "return": 97.37,
+      "exit_reason": "end_of_data",
+      "holding_days": 440,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "XEC",
+      "entry_date": "2015-11-16",
+      "exit_date": "2016-05-05",
+      "entry_price": 113.03,
+      "exit_price": 110.77,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 117,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "XRX",
+      "entry_date": "2013-10-10",
+      "exit_date": "2017-08-01",
+      "entry_price": 41.4,
+      "exit_price": 40.57,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 958,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    },
+    {
+      "ticker": "ZION",
+      "entry_date": "2013-11-08",
+      "exit_date": "2016-05-18",
+      "entry_price": 28.13,
+      "exit_price": 27.57,
+      "return": -2.0,
+      "exit_reason": "stop_loss",
+      "holding_days": 634,
+      "flew": false,
+      "pattern": "dsz_n",
+      "level": 0
+    }
+  ],
+  "metrics": {
+    "total_trades": 90,
+    "win_rate": 1.1,
+    "avg_return": -0.9,
+    "avg_win": 97.37,
+    "avg_loss": -2.0,
+    "best": 97.37,
+    "worst": -2.0,
+    "total_return_pct": -80.6,
+    "exit_distribution": {
+      "stop_loss": 89,
+      "end_of_data": 1
+    }
+  }
+}
