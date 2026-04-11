@@ -1,157 +1,97 @@
-# Stock Visualization
+# B1/B2 Trading Strategy — Backtest & Visualization
 
-Data-driven analysis of Chinese and U.S. equity markets using historical data.
-This project focuses on **interpretable signal analysis**, **strategy evaluation**, and **backtesting**.
+**DS4200 Final Project** | Northeastern University | Spring 2026
 
-## 🆕 What's New (2026)
+Interactive dashboard exploring whether technical analysis-based strategies can generate consistent returns across US and Chinese stock markets.
 
-### B1/B2 Strategy Scanner v2.0
-- Real-time stock screening with B1 (oversold bounce) and B2 (momentum) strategies
-- Built-in technical indicators: KDJ, MACD, RSI, BOLL, Zhixing Trend Lines, Brick Chart
-- Streamlit UI for single stock analysis and batch scanning
-- Support for Tushare (China A-shares) and Yahoo Finance
+---
 
-### Neural Network Trading Strategy
-- Node-based strategy composition
-- Walk-forward MLP backtesting
-- Portfolio metrics: cumulative return, max drawdown, win rate
+## 🎯 Project Overview
 
-## What This Project Does
+This project backtests two mean-reversion strategies (**B1** and **B2**) on:
+- **S&P 500**: 505 stocks (2013–2018)
+- **Chinese A-shares**: 3,066 stocks (2015–2026)
 
-- **Data Collection**: Tushare (China A-shares), Yahoo Finance (US/HK stocks)
-- **Technical Analysis**: KDJ, MACD, RSI, BOLL, Moving Averages, Zhixing Trend Lines, Brick Chart
-- **Strategy Signals**: B1 (KDJ J<13, MACD DEA>0), B2 (KDJ J<55, +4% price, volume ratio>1.1)
-- **Backtesting**: Walk-forward analysis, portfolio metrics
-- **Visualization**: K-line charts, profit curves, violin plots, monthly returns
+Through a 81-combination parameter sweep, we identify optimal settings for stop-loss, observation period, and profit-taking thresholds.
 
-## Strategies
+### Live Dashboard
+👉 **[View Interactive Dashboard](https://rayrayowo.github.io/DS4200-visualization/)**
 
-### B1 Strategy (Oversold Bounce)
-- Market: Shanghai/Shenzhen Main Board
-- Weekly: MA30 > MA60 > MA120 > MA240
-- Daily: KDJ J < 13, MACD DEA > 0
-- Zhixing: White line > Yellow line
+---
 
-### B2 Strategy (Momentum)
-- Market: Shanghai/Shenzhen Main Board
-- Weekly: MA30 > MA60 > MA120 > MA240
-- Daily: KDJ J < 55, Price change >= 4%, Volume ratio >= 1.1
+## 📊 Strategies
 
-### Brick Chart (ZX-ZHUAN)
-- White brick = Buy signal (golden cross after green day)
-- Red brick = Hold
-- Green brick = Short/Empty
+### B1 — Oversold Rebound
+- **Entry**: KDJ J < 13 + MACD DEA > 0 + Uptrend (white line > yellow line)
+- **Logic**: Buy when extremely oversold but macro trend remains intact
+- **Optimal**: 3% stop-loss, 3-day observation, 10% fly trigger
 
-## Repository Structure
+### B2 — Momentum Confirmation
+- **Entry**: After B1 appears → daily gain ≥ 4% + volume surge ≥ 1.1x
+- **Logic**: Wait for breakout confirmation before entering
+- **Optimal**: 3% stop-loss, 2-day observation, 5% fly trigger
+
+---
+
+## 📈 Visualizations
+
+| Viz | Description | Tech |
+|-----|-------------|------|
+| **1. Equity Curve** | Portfolio value over time with regime shading | D3.js |
+| **2. Parameter Sensitivity** | Heatmap of 81 parameter combinations | Altair |
+| **3. Cross-Market Comparison** | US vs China performance side-by-side | Static |
+| **4. Trade Outcomes** | Scatter plot of individual trades | D3.js |
+| **5. K-line with Signals** | AAPL candlestick with buy/sell markers | TradingView Lightweight Charts |
+
+---
+
+## 🔑 Key Findings
+
+1. **Stop-loss is the most critical parameter** — Tight stops (2-3%) dramatically improve risk-adjusted returns
+2. **B1 is cross-market robust** — Similar Sharpe ratios in US (1.11) and China (1.77) with identical optimal parameters
+3. **B2 is market-dependent** — Exceptional in A-shares but modest in S&P 500, reflecting different momentum patterns
+4. **Asymmetric returns drive profitability** — ~50% win rate, but winners generate outsized returns through the "fly" mechanism
+
+---
+
+## 🛠️ Tech Stack
+
+- **Data**: Kaggle (S&P 500), Tushare Pro (A-shares)
+- **Backtesting**: Python (Pandas, NumPy)
+- **Visualization**: D3.js v7, Altair, TradingView Lightweight Charts v4
+- **Deployment**: GitHub Pages (gh-pages branch)
+
+---
+
+## 📂 Project Structure
 
 ```
-stock-visualization/
-├── b1_scanner/           # B1/B2 Strategy Scanner v2.0
-│   ├── app.py           # Streamlit UI
-│   ├── scanner_core.py   # Strategy logic
-│   ├── indicators.py     # Technical indicators
-│   └── data_sources.py  # Tushare + Yahoo Finance
-│
-├── trade_wizards_mvp/   # Neural Network Trading
-│   ├── run_demo.py      # Run backtest
-│   ├── tw_mvp/          # Core modules
-│   └── config/          # Strategy configs
-│
-├── src/                  # Legacy analysis scripts
-├── data/                 # Raw and processed data
-├── outputs/              # Charts and results
+DS4200-visualization/
+├── docs/
+│   ├── index.html          # Main dashboard
+│   ├── css/style.css       # Styles
+│   ├── js/                 # Visualization scripts
+│   ├── data/               # JSON data files
+│   └── img/                # Static images
+├── PRESENTATION_SCRIPT.md  # 5-minute demo script
 └── README.md
 ```
 
-## Quick Start
+---
 
-### B1 Scanner (Recommended)
+## 👥 Authors
 
-```bash
-cd b1_scanner
-pip install -r requirements.txt
+- **Ruiyang Zhang** (@rayrayowo)
+- **Alan**
 
-# Set Tushare token (optional)
-export TUSHARE_TOKEN="your_token_here"
+---
 
-# Run UI
-streamlit run app.py
-```
+## 📄 Course
 
-### Neural Network Strategy
+DS4200 — Information Presentation and Data Visualization | Northeastern University
 
-```bash
-cd trade_wizards_mvp
-.venv/bin/python run_demo.py
-```
+---
 
-## Data Sources
+## 📜 License
 
-| Source | Coverage | API |
-|--------|----------|-----|
-| **Tushare** | China A-shares (600/601/603/000) | Requires token |
-| **Yahoo Finance** | US/HK/China stocks | Free |
-
-### Get Tushare Token
-1. Register at https://tushare.pro
-2. Get your token from profile
-3. Set: `export TUSHARE_TOKEN="your_token"`
-
-## Technical Indicators
-
-- **KDJ** (9,3,3): Overbought/oversold
-- **MACD** (12,26,9): Trend
-- **RSI** (14): Relative strength
-- **BOLL** (20,2): Bollinger Bands
-- **Zhixing White**: EMA(EMA(C,10),10) - Short-term trend
-- **Zhixing Yellow**: (MA14+MA28+MA57+MA114)/4 - Long-term trend
-- **Brick Chart**: Volume-based momentum
-
-## Main Outputs
-
-Generated under `b1_scanner/`:
-- Real-time screening results
-- K-line charts with indicators
-- Buy/sell signals
-
-Generated under `trade_wizards_mvp/outputs/`:
-- `metrics.json/csv`: Performance metrics
-- `trades.csv`: Trade records
-- `trade_annotations_*.png`: Charts with entry/exit markers
-
-## Customize Strategies
-
-### Add Custom Stock List
-Edit the watchlist in `b1_scanner/app.py`:
-```
-600519.SH,贵州茅台
-600276.SH,恒瑞医药
-688235.SH,百济神州
-```
-
-### Modify B1/B2 Conditions
-Edit `scanner_core.py`:
-```python
-@dataclass
-class B1Config:
-    strategy: str = "B1"  # or "B2"
-    require_golden_cross: bool = False
-    require_brick_white: bool = False
-```
-
-## Tech Stack
-
-- **Python 3.12**
-- **Data**: Pandas, NumPy, Tushare, yfinance
-- **ML**: scikit-learn (Neural Networks)
-- **Visualization**: Plotly, Matplotlib, Streamlit
-- **Backtesting**: Custom pipeline
-
-## License
-
-MIT License - For educational purposes only. Not investment advice.
-
-## Contact
-
-- GitHub: [rayrayowo](https://github.com/rayrayowo)
-- Email: zhang.ruiyang@northeastern.edu
+MIT License — For educational purposes only. Not investment advice.
