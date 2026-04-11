@@ -15,7 +15,7 @@ This project backtests two mean-reversion strategies (**B1** and **B2**) on:
 Through a 81-combination parameter sweep, we identify optimal settings for stop-loss, observation period, and profit-taking thresholds.
 
 ### Live Dashboard
-👉 **[View Interactive Dashboard](https://rayrayowo.github.io/DS4200-visualization/)**
+👉 **[View Interactive Dashboard](https://rayrayowo.github.io/DS4200-visualization/docs/index.html)**
 
 ---
 
