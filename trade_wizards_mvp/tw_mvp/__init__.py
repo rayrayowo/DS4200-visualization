@@ -1,2 +1,0 @@
-"""Trade Wizards MVP package."""
-
