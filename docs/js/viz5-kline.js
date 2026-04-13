@@ -50,7 +50,7 @@
   legendLabel.textContent = "Markers:";
   legendBar.appendChild(legendLabel);
 
-  ["entry", "stop_loss", "fly_stop", "s1_sell"].forEach(function (key) {
+  ["entry", "stop_loss", "fly_stop", "s1_sell", "end_of_data"].forEach(function (key) {
     var item = document.createElement("span");
     item.style.cssText = "display:inline-flex;align-items:center;gap:4px;";
     var dot = document.createElement("span");
@@ -417,8 +417,8 @@
           position: isEntry ? "belowBar" : "aboveBar",
           color: color,
           shape: shape,
-          text: label,
-          size: 1
+          text: "",
+          size: 0.5
         });
       });
 
