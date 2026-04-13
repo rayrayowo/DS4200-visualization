@@ -88,12 +88,16 @@ header .subtitle {
   opacity: 0.8;
   font-weight: 400;
   font-style: italic;
+  max-width: none;
+  text-align: center;
 }
 header .meta {
   margin-top: 0.75rem;
   font-size: 0.82rem;
   opacity: 0.5;
   letter-spacing: 0.02em;
+  max-width: none;
+  text-align: center;
 }
 
 /* ── Sticky Nav ── */

@@ -42,8 +42,18 @@
 <section id="introduction">
   <h2>Introduction</h2>
   <p>
-    Technical indicators like KDJ and MACD are widely used by traders to time entries and exits.
-    But do they actually work? And if so, <em>which parameters matter most</em>?
+    Millions of retail traders rely on technical indicators like KDJ and MACD to time their entries and exits.
+    Yet there is little rigorous, data-driven evidence on whether these signals actually produce
+    consistent, risk-adjusted returns &mdash; especially across different markets. If a simple
+    indicator-based strategy can beat buy-and-hold after accounting for drawdowns and slippage,
+    that finding has real implications for both individual investors and our understanding of market efficiency.
+  </p>
+  <p>
+    We designed two trading strategies &mdash; <strong>B1</strong> (oversold rebound) and <strong>B2</strong>
+    (momentum confirmation) &mdash; and backtested them with rigorous position management across
+    <strong>S&amp;P 500</strong> (505 stocks, 2013&ndash;2018) and <strong>3,066 Chinese A-share stocks</strong>
+    (2015&ndash;2026). We then ran a <strong>parameter sweep</strong> (81 combinations per strategy) to
+    find optimal stop-loss, observation period, and profit-taking thresholds.
   </p>
   <p>
     We designed two trading strategies &mdash; <strong>B1</strong> (oversold rebound) and <strong>B2</strong>
@@ -287,10 +297,25 @@
     The key is preserving capital on losers (tight stop-loss) while letting winners run.</li>
   </ol>
 
+  <h3>Future Work</h3>
+  <ul>
+    <li><strong>Transaction costs and slippage:</strong> The current backtest assumes zero friction.
+    Incorporating realistic commission, bid-ask spread, and market-impact costs would provide a more
+    accurate picture of net returns.</li>
+    <li><strong>Walk-forward validation:</strong> Our parameter sweep optimizes on the full dataset.
+    A walk-forward (rolling train/test) approach would reduce overfitting risk and better simulate
+    real-world deployment.</li>
+    <li><strong>Additional markets:</strong> Testing B1/B2 on Hong Kong, Japanese, and European equities
+    would further validate the cross-market robustness claim.</li>
+    <li><strong>Machine-learning enhancement:</strong> Using features from the technical indicators as
+    inputs to a classification model (e.g., gradient boosting) could improve signal quality by learning
+    non-linear combinations that hand-crafted rules may miss.</li>
+  </ul>
+
   <h3>Implementation</h3>
   <p>
     The full backtest engine, signal generation code, parameter sweep scripts, and data pipeline are
-    available in the <a href="https://github.com/rayrayowo/stock-visualization" target="_blank">GitHub repository</a>.
+    available in the <a href="https://github.com/rayrayowo/DS4200-visualization" target="_blank">GitHub repository</a>.
     The backtest runs on S&amp;P 500 data (Kaggle) and Chinese A-share data (Tushare Pro API).
   </p>
 </section>
