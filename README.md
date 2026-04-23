@@ -73,7 +73,7 @@ DS4200-visualization/
 │   ├── js/                 # Visualization scripts
 │   ├── data/               # JSON data files
 │   └── img/                # Static images
-├── PRESENTATION_SCRIPT.md  # 5-minute demo script
+├── DS4200_Project_Description.docx  # Design document for submission
 └── README.md
 ```
 
