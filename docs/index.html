@@ -42,7 +42,8 @@
 <section id="introduction">
   <h2>Introduction</h2>
   <p>
-    Technical indicators like KDJ and MACD are widely used by traders to time entries and exits.
+    Technical indicators like <strong>KDJ</strong> (a stochastic oscillator measuring overbought/oversold levels)
+    and <strong>MACD</strong> (a momentum indicator tracking trend direction) are widely used by traders to time entries and exits.
     But do they actually work? And if so, <em>which parameters matter most</em>?
   </p>
   <p>
@@ -71,8 +72,8 @@
   <p>
     Both strategies use the same exit framework: <strong>hard stop-loss</strong> (2&ndash;4% below entry),
     <strong>observation period</strong> (sell if not profitable after N days), <strong>fly trigger</strong>
-    (sell half when gain &ge; 5&ndash;10%), and <strong>S1 signal</strong> (exit remaining on a high-volume
-    bearish candle). The backtest uses <strong>10 position slots</strong> for B1 and <strong>4 slots</strong>
+    (sell half when gain &ge; 5&ndash;10%, a profit-taking mechanism), and <strong>S1 signal</strong>
+    (exit remaining position on a high-volume bearish candle, a trend-reversal sell signal). The backtest uses <strong>10 position slots</strong> for B1 and <strong>4 slots</strong>
     for B2, with dynamic position sizing based on current portfolio value.
   </p>
 </section>
@@ -148,7 +149,7 @@
     </div>
     <div class="viz-container" id="viz1-container"></div>
     <div class="takeaway">
-      <strong>Key result:</strong> The optimized B1 strategy achieved a <strong>Sharpe ratio of 1.42</strong>
+      <strong>Key Finding:</strong> The optimized B1 strategy achieved a <strong>Sharpe ratio of 1.42</strong>
       with only <strong>-7.6% max drawdown</strong>, turning $1M into $1.86M (+86.3%) over 5 years
       (13.3% CAGR). The strategy performs consistently across both bull and bear regimes.
     </div>
@@ -226,7 +227,7 @@
 
     <div class="viz-container" id="viz4-container"></div>
     <div class="takeaway">
-      <strong>Key insight:</strong> The strategy shows <strong>balanced win-loss distribution</strong>:
+      <strong>Key Finding:</strong> The strategy shows <strong>balanced win-loss distribution</strong>:
       54% of trades are profitable with an average return of +2.0%. Stop-loss exits (red dots)
       are tightly clustered at -2%, effectively limiting downside. S1 exits (green dots) and
       fly stops (orange dots) represent the most profitable trades, with some gains exceeding +10%.
@@ -254,7 +255,7 @@
     </div>
     <div class="viz-container" id="viz5-container"></div>
     <div class="takeaway">
-      <strong>Observation:</strong> B1 signals (green) consistently appear near local price bottoms,
+      <strong>Key Finding:</strong> B1 signals (green) consistently appear near local price bottoms,
       confirming the oversold-rebound thesis. Not every signal leads to a rally, but the ones that do
       tend to precede significant upward moves, which is why the fly mechanism captures value.
     </div>
@@ -268,6 +269,11 @@
   <h2>Conclusion</h2>
   <p>
     Our cross-market backtest of the B1/B2 oversold rebound strategy reveals several important findings:
+  </p>
+  <p class="conclusion-summary">
+    <strong>Bottom line:</strong> A tight 2% stop-loss is the single most important factor. The B1 strategy
+    is robust across both US and Chinese markets (Sharpe &ge; 1.4), while B2 works only in momentum-driven
+    A-shares. Low win rates (~30%) are offset by outsized gains on winning trades.
   </p>
   <ol>
     <li><strong>Stop-loss is the most important parameter.</strong> Across both markets and both strategies,
