@@ -15,8 +15,8 @@
   const margin = { top: 24, right: 30, bottom: 120, left: 72 };
   const fullWidth = Math.max(container.clientWidth, 800);
   const width = fullWidth - margin.left - margin.right;
-  const totalHeight = 540;
-  const contextHeight = 50;
+  const totalHeight = 580;
+  const contextHeight = 80;
   const gap = 40;
   const focusHeight = totalHeight - contextHeight - gap - margin.top - margin.bottom;
 
@@ -426,7 +426,7 @@
       .attr("x", width / 2).attr("y", -6)
       .attr("text-anchor", "middle")
       .attr("font-size", "11px").attr("fill", "#999")
-      .text("Drag to select time range");
+      .text("Drag anywhere on this chart to zoom into a time range");
 
     // ── Brush ──
     function brushed(event) {
@@ -466,7 +466,9 @@
       .style("stroke-width", "1");
     // Hide default D3 triangle handles — we use custom circle handles instead
     context.selectAll(".handle")
-      .style("display", "none");
+      .style("display", "none")
+      .style("width", "12px")
+      .style("height", "12px");
 
     // ── Brush handle circles (draggable indicators) ──
     // Left handle circle
@@ -474,18 +476,22 @@
       .attr("class", "brush-handle brush-handle-left")
       .attr("cx", 0)
       .attr("cy", contextHeight / 2)
-      .attr("r", 6)
+      .attr("r", 8)
       .attr("fill", "var(--color-accent)")
-      .attr("opacity", "0.8");
+      .attr("stroke", "#fff")
+      .attr("stroke-width", 2)
+      .attr("opacity", "0.9");
 
     // Right handle circle
     const handleRight = context.append("circle")
       .attr("class", "brush-handle brush-handle-right")
       .attr("cx", width)
       .attr("cy", contextHeight / 2)
-      .attr("r", 6)
+      .attr("r", 8)
       .attr("fill", "var(--color-accent)")
-      .attr("opacity", "0.8");
+      .attr("stroke", "#fff")
+      .attr("stroke-width", 2)
+      .attr("opacity", "0.9");
 
   }).catch(function (err) {
     container.innerHTML = '<p style="color:#E45756;text-align:center;">Error loading data. Check console for details.</p>';
